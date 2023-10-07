@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Rafał</h1>
 <h3 align="center">Java enjoyer</h3>
-
-<h3 align="left">Connect with me:</h3>
+<img src="https://wallpapercave.com/wp/wp6933338.jpg" alt="My Image">
+<h3 align="left">Leetcode:</h3>
 <p align="left">
 <a href="https://www.leetcode.com/rafekpro" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="rafekpro" height="30" width="40" /></a>
 </p>
