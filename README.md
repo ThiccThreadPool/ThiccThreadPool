@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Rafał</h1>
-<p align="left">
+<p align="center">
 <div>Leetcode profile:</div>
 <a href="https://www.leetcode.com/rafekpro" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="rafekpro" height="30" width="40" /></a>
 </p>
