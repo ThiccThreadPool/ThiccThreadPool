@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafał's GitHub Readme</title>
+  <style>
+    body {
+      background-color: #2c3e50; /* Choose your desired background color */
+      color: #ecf0f1; /* Choose your desired text color */
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1, h3, p {
+      text-align: center;
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p img {
+      margin: 10px;
+    }
+
+    img {
+      border-radius: 10px; /* Optional: Add border-radius to images */
+    }
+  </style>
+</head>
+<body>
+
 <h1 align="center">Hi 👋, I'm Rafał</h1>
 
 <p align="center">
@@ -36,3 +70,6 @@
 <p align="center">
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rafalszyg-cdetheglbe&" alt="rafalszyg-cdetheglbe" />
 </p>
+
+</body>
+</html>
