@@ -1,6 +1,6 @@
 <p float="left">
   <img src="rocket.gif" alt="Alt text" width="200" />
-  <img src="hi2.gif" alt="Alt text" width="400" />
+  <img src="hi2.gif" alt="Alt text" width="250" />
 </p>
 
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=rafalszyg-cdetheglbe&show_icons=true&locale=en&layout=compact" alt="rafalszyg-cdetheglbe" /></p>
