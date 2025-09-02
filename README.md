@@ -1,5 +1,5 @@
 <p float="left">
-  <img src="autumn.gif" alt="Alt text" width="200" />
+  <img src="autumn.gif" alt="Alt text" width="500" />
 </p>
 
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=rafalszyg-cdetheglbe&show_icons=true&locale=en&layout=compact" alt="rafalszyg-cdetheglbe" /></p>
