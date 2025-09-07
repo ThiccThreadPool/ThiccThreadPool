@@ -2,9 +2,9 @@
   <img src="autumn.gif" alt="Alt text" width="500" />
 </p>
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=rafalszyg-cdetheglbe&show_icons=true&locale=en&layout=compact" alt="rafalszyg-cdetheglbe" /></p>
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=ThiccThreadPool&show_icons=true&locale=en&layout=compact" alt="ThiccThreadPool" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ThiccThreadPool&" alt="ThiccThreadPool" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ThiccThreadPool&" alt="ć" /></p>
 
 <p align="left"> 
   <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="70" height="40"/> </a>
