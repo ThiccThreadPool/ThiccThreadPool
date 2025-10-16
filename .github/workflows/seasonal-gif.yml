@@ -20,7 +20,7 @@ jobs:
           elif [ "$month" -ge 6 ] && [ "$month" -le 8 ]; then
             echo "SEASON=summer" >> $GITHUB_ENV
           elif [ "$month" -ge 9 ] && [ "$month" -le 11 ]; then
-            echo "SEASON=autumn" >> $GITHUB_ENV
+            echo "SEASON=winter" >> $GITHUB_ENV
           else
             echo "SEASON=winter" >> $GITHUB_ENV
           fi
