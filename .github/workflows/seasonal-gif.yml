@@ -26,6 +26,11 @@ jobs:
             echo "SEASON=winter" >> $GITHUB_ENV
           fi
 
+      - name: Debug season
+        run: |
+          echo "Detected season: $SEASON"
+          grep '<img src="assets' README.md || echo "No image found in README"
+
       - name: Update README
         id: update
         run: |
