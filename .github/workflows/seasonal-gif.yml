@@ -44,5 +44,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Update seasonal GIF to $SEASON"
-          git push
+          git commit -m "Update seasonal GIF to $SEASON" || echo "No changes to commit."
+          git push || echo "Nothing to push."
