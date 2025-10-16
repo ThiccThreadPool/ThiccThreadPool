@@ -36,6 +36,7 @@ jobs:
             echo "CHANGED=true" >> $GITHUB_ENV
           else
             echo "CHANGED=false" >> $GITHUB_ENV
+          fi
 
       - name: Commit changes if GIF changed
         if: env.CHANGED == 'true'
