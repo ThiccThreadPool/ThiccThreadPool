@@ -1,0 +1,50 @@
+name: Update Seasonal GIF
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  update-gif:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Determine season
+        id: season
+        run: |
+          month=$(date +%m)
+          if [ "$month" -ge 3 ] && [ "$month" -le 5 ]; then
+            echo "spring" > season.txt
+          elif [ "$month" -ge 6 ] && [ "$month" -le 8 ]; then
+            echo "summer" > season.txt
+          elif [ "$month" -ge 9 ] && [ "$month" -le 11 ]; then
+            echo "autumn" > season.txt
+          else
+            echo "winter" > season.txt
+          fi
+          cat season.txt
+
+      - name: Update README
+        id: update
+        run: |
+          SEASON=$(cat season.txt)
+          GIF_LINE="<img src=\"assets/${SEASON}.gif\" alt=\"${SEASON}\" width=\"500\" />"
+          CURRENT_LINE=$(grep -o '<img src="assets/.*\.gif" alt=".*" width="500" />' README.md || echo "")
+          
+          if [ "$CURRENT_LINE" != "$GIF_LINE" ]; then
+            sed -i "s|<img src=\"assets/.*\.gif\" alt=\".*\" width=\"500\" />|$GIF_LINE|" README.md
+            echo "CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "CHANGED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Commit changes if GIF changed
+        if: env.CHANGED == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update seasonal GIF to $SEASON"
+          git push
