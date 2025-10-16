@@ -16,20 +16,18 @@ jobs:
         run: |
           month=$(date +%m)
           if [ "$month" -ge 3 ] && [ "$month" -le 5 ]; then
-            echo "spring" > season.txt
+            echo "SEASON=spring" >> $GITHUB_ENV
           elif [ "$month" -ge 6 ] && [ "$month" -le 8 ]; then
-            echo "summer" > season.txt
+            echo "SEASON=summer" >> $GITHUB_ENV
           elif [ "$month" -ge 9 ] && [ "$month" -le 11 ]; then
-            echo "autumn" > season.txt
+            echo "SEASON=autumn" >> $GITHUB_ENV
           else
-            echo "winter" > season.txt
+            echo "SEASON=winter" >> $GITHUB_ENV
           fi
-          cat season.txt
 
       - name: Update README
         id: update
         run: |
-          SEASON=$(cat season.txt)
           GIF_LINE="<img src=\"assets/${SEASON}.gif\" alt=\"${SEASON}\" width=\"500\" />"
           CURRENT_LINE=$(grep -o '<img src="assets/.*\.gif" alt=".*" width="500" />' README.md || echo "")
           
@@ -38,7 +36,6 @@ jobs:
             echo "CHANGED=true" >> $GITHUB_ENV
           else
             echo "CHANGED=false" >> $GITHUB_ENV
-          fi
 
       - name: Commit changes if GIF changed
         if: env.CHANGED == 'true'
