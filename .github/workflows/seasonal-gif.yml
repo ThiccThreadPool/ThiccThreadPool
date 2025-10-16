@@ -48,3 +48,12 @@ jobs:
             echo "No change needed."
             echo "CHANGED=false" >> $GITHUB_ENV
           fi
+
+      - name: Commit changes if GIF changed
+        if: env.CHANGED == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update seasonal GIF to $SEASON" || echo "No changes to commit."
+          git push || echo "Nothing to push."
